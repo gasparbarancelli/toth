@@ -6,6 +6,6 @@ import reactor.core.publisher.Flux;
 
 public interface PublicacaoService {
 
-    Flux<Publicacao> find(Pageable pageable);
+    Flux<Publicacao> findAllBy(Pageable pageable);
 
 }

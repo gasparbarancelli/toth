@@ -17,9 +17,9 @@ public class PublicacaoController {
     @Autowired private PublicacaoService publicacaoService;
 
     @GetMapping
-    public Flux<Publicacao> find(@RequestParam("page") int page, @RequestParam("size") int size) {
+    public Flux<Publicacao> findAllBy(@RequestParam("page") int page, @RequestParam("size") int size) {
         var paginacao = PageRequest.of(page, size);
-        return publicacaoService.find(paginacao);
+        return publicacaoService.findAllBy(paginacao);
     }
 
 }

@@ -14,7 +14,7 @@ public class PublicacaoServiceImpl implements PublicacaoService {
     @Autowired private PublicacaoRepository publicacaoRepository;
 
     @Override
-    public Flux<Publicacao> find(Pageable pageable) {
+    public Flux<Publicacao> findAllBy(Pageable pageable) {
         return publicacaoRepository.findAllBy(pageable);
     }
 
